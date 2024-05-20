@@ -2,7 +2,16 @@
 import { jsx, css, Global, ClassNames } from '@emotion/react'
 import Head from 'next/head'
 import LayoutAuth from '@/containers/LayoutAuth/LayoutAuth'
-import { InputText, InputPassword, Button } from '@/components'
+import FormControl from '@/containers/FormControl/FormControl'
+import {
+  InputText,
+  InputPassword,
+  Button,
+  InputEmail,
+  H1,
+  H2,
+  Space,
+} from '@/components'
 
 export default function Login() {
   return (
@@ -14,11 +23,25 @@ export default function Login() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LayoutAuth>
-        <form>
-          <InputText placeholder="email" />
-          <InputPassword placeholder="password" />
-          <Button type="success">Sign in</Button>
-        </form>
+        <>
+          <Space />
+          <H2 align="center">لاگین</H2>
+          <form
+            css={css`
+              width: 70%;
+            `}
+          >
+            <FormControl>
+              <InputEmail placeholder="email" />
+            </FormControl>
+            <FormControl>
+              <InputPassword placeholder="password" />
+            </FormControl>
+            <FormControl>
+              <Button type="success">Sign in</Button>
+            </FormControl>
+          </form>
+        </>
       </LayoutAuth>
     </>
   )

@@ -8,7 +8,14 @@ const theme = {
       fonSize: '1em',
     },
     h1: {
-      fontSize: 30,
+      fontSize: 1.802,
+      lineHeight: 1.15,
+      fontWeight: 400,
+    },
+    h2: {
+      fontSize: 1.602,
+      lineHeight: 1.15,
+      fontWeight: 400,
     },
   },
   spaces: ['1px', '2px', '4px', '8px', '16px', '32px'],

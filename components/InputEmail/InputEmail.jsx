@@ -4,12 +4,6 @@ import Input from '../Input/Input'
 
 export default function InputEmail({ placeholder }) {
   return (
-    <Input
-      type="email"
-      placeholder={placeholder}
-      css={css`
-        direction: ltr;
-      `}
-    />
+    <Input type="email" placeholder={placeholder} direction="ltr" css={css``} />
   )
 }

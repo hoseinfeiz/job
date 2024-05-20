@@ -6,6 +6,7 @@ export default function InputPassword({ placeholder }) {
     <Input
       type="password"
       placeholder={placeholder}
+      direction="ltr"
       css={css`
         direction: ltr;
       `}

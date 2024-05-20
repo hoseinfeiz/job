@@ -27,7 +27,7 @@ export default function LayoutAuth({ children }) {
           src="images/logo.png"
         />
       </div>
-      <h2>لطفا لاگین کنید</h2>
+
       {children}
     </div>
   )

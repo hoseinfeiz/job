@@ -188,6 +188,10 @@ export default function Reset() {
         body {
           font-family: Shabnam;
           direction: rtl;
+          font-size: 16px;
+          font-weight: 400;
+          line-hight: 1.6;
+          color: #333;
         }
         * {
           font-family: Shabnam;
