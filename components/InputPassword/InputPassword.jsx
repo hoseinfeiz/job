@@ -1,11 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react'
 import { Input } from '..'
-export default function InputPassword({ placeholder }) {
+export default function InputPassword(props) {
   return (
     <Input
+      {...props}
       type="password"
-      placeholder={placeholder}
       direction="ltr"
       css={css`
         direction: ltr;

@@ -2,14 +2,6 @@
 import { css } from '@emotion/react'
 import Input from '../Input/Input'
 
-export default function InputText({ placeholder }) {
-  return (
-    <Input
-      type="text"
-      placeholder={placeholder}
-      css={css`
-        direction: ltr;
-      `}
-    />
-  )
+export default function InputText(props) {
+  return <Input type="text" {...props} direction="ltr" />
 }

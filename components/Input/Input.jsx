@@ -5,9 +5,14 @@ export default function Input({
   type = 'text',
   placeholder,
   direction = 'rtl',
+  changeHandle,
 }) {
+  const InputChangeHandle = (e) => {
+    changeHandle(e.target.value)
+  }
   return (
     <input
+      onChange={(e) => InputChangeHandle(e)}
       type={type}
       placeholder={placeholder}
       css={css`

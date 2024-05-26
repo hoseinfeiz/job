@@ -1,9 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react'
 import { useTheme } from '@emotion/react'
-export default function Button({ type, children }) {
+export default function Button({ type, children, submitHandler }) {
   const theme = useTheme()
-
   let backColor = ''
   let btnColor = ''
   if (type === 'danger') {
@@ -15,6 +14,7 @@ export default function Button({ type, children }) {
   }
   return (
     <button
+      onClick={submitHandler}
       type="submit"
       css={css`
         width: 100%;
