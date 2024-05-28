@@ -2,8 +2,10 @@
 import { css } from '@emotion/react'
 import { useState } from 'react'
 import Head from 'next/head'
+import { useDispatch } from 'react-redux'
 import LayoutAuth from '@/containers/LayoutAuth/LayoutAuth'
 import FormControl from '@/containers/FormControl/FormControl'
+
 import {
   InputText,
   InputPassword,
@@ -13,12 +15,21 @@ import {
   H2,
   Space,
 } from '@/components'
-
+import actionTypes from '@/configs/actionTypes'
+import { useRouter } from 'next/router'
 export default function Login() {
+  const dispatch = useDispatch()
+  const router = useRouter()
   const [formValue, setFormvalue] = useState({})
   const SubmitHandler = (event) => {
     event.preventDefault()
     console.log('form values', formValue)
+    dispatch({
+      type: actionTypes.LOGIN,
+      logged: true,
+      email: formValue.email,
+    })
+    router.push('/')
   }
   const ChangeHandle = (name, value) => {
     setFormvalue({
@@ -56,8 +67,8 @@ export default function Login() {
               />
             </FormControl>
             <FormControl>
-              <Button submitHandler={SubmitHandler} type="success">
-                Sign in
+              <Button submitHandler={SubmitHandler} type="large">
+                ورود
               </Button>
             </FormControl>
           </form>

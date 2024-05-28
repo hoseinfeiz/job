@@ -1,6 +1,24 @@
 import Head from 'next/head'
-
+import { useState } from 'react'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
+import LayoutHomeBanner from '@/containers/LayoutHomeBanner/LayoutHomeBanner'
+import JobcardList from '@/containers/JobcardList/JobcardList'
 export default function Home() {
+  const [jobIList, setJobIList] = useState([
+    {
+      jobTitle: 'برنامه نویس frontEnd',
+      jobDateStart: '1 اردیبهشت',
+      jobCompanyName: 'اسنپ',
+      jobType: 'تمام وقت',
+    },
+    {
+      jobTitle: 'برنامه نویس Backend',
+      jobDateStart: '1 فروردین',
+      jobCompanyName: 'دیجی کالا',
+      jobType: 'پاره وقت',
+    },
+  ])
   return (
     <>
       <Head>
@@ -9,7 +27,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>job website</main>
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100vh;
+        `}
+      >
+        <LayoutHomeBanner />
+        <JobcardList jobList={jobIList} />
+      </div>
     </>
   )
 }

@@ -63,8 +63,8 @@ export default function Register() {
               />
             </FormControl>
             <FormControl>
-              <Button submitHandler={SubmitHandler} type="success">
-                Sign up
+              <Button submitHandler={SubmitHandler} type="large">
+                ثبت نام
               </Button>
             </FormControl>
             <HyperLink>وارد شوید</HyperLink>

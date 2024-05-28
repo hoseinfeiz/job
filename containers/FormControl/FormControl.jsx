@@ -7,6 +7,7 @@ export default function FormControl({ children }) {
     <div
       css={css`
         display: flex;
+        justify-content: center;
         padding: ${theme.spaces[3]} 0;
       `}
     >
